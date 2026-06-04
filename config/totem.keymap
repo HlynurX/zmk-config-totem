@@ -97,7 +97,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y        &kp U          &kp I        &AlphaHold O MINUS  &mt P LEFT_BRACKET
+                &kp Q       &kp W       &kp E        &kp R        &kp T        &kp Y        &kp U          &kp I        &AlphaHold MINUS O  &mt LEFT_BRACKET P
                 &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G        &kp H        &mt RSHFT J    &mt RCTRL K  &mt LEFT_ALT L      &mt LWIN SEMICOLON
 &kp LEFT_SHIFT  &kp Z       &kp X       &kp C        &kp V        &kp B        &kp N        &kp M          &kp COMMA    &kp DOT             &AlphaHold BACKSLASH SLASH  &kp SQT
                                         &kp ESCAPE   &kp SPACE    &lt 1 TAB    &lt 2 ENTER  &kp BACKSPACE  &kp DELETE
