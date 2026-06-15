@@ -98,10 +98,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp Q       &kp W       &kp E        &kp R        &kp T                    &kp Y        &kp U          &kp I        &AlphaHold MINUS O  &mt LEFT_BRACKET P
-                &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G                    &kp H        &mt RSHFT J    &mt RCTRL K  &mt LEFT_ALT L      &mt LWIN SEMICOLON
-&kp LEFT_SHIFT  &kp Z       &kp X       &kp C        &kp V        &AlphaHold QUESTION B    &kp N        &kp M          &kp COMMA    &kp DOT             &AlphaHold BACKSLASH SLASH  &kp SQT
-                                        &kp ESCAPE   &kp SPACE    &lt 1 TAB                &lt 2 ENTER  &kp BACKSPACE  &kp DELETE
+                &kp Q       &kp W       &kp E                    &kp R               &kp T                    &kp Y        &kp U          &kp I        &AlphaHold MINUS O  &mt LEFT_BRACKET P
+                &mt LGUI A  &mt LALT S  &mt LCTRL D              &mt LSHFT F         &kp G                    &kp H        &mt RSHFT J    &mt RCTRL K  &mt LEFT_ALT L      &mt LWIN SEMICOLON
+&kp LEFT_SHIFT  &kp Z       &kp X       &AlphaHold LC(C) C       &AlphaHold LC(V) V  &AlphaHold QUESTION B    &kp N        &kp M          &kp COMMA    &kp DOT             &AlphaHold BACKSLASH SLASH  &kp SQT
+                                        &mt LEFT_CONTROL ESCAPE  &kp SPACE           &lt 1 TAB                &lt 2 ENTER  &kp BACKSPACE  &kp DELETE
             >;
         };
 
@@ -126,7 +126,7 @@
             bindings = <
         &kp ESC    &bt BT_CLR  &kp UP    &kp EQUAL  &kp LBRC    &kp RBRC  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
         &kp LSHFT  &kp LEFT    &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
-&trans  &kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
+&trans  &kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &tog 6
                                &trans    &trans     &trans      &mo ADJ   &kp KP_N0  &trans
             >;
         };
@@ -150,9 +150,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp RA(U)   &kp SQT     &kp DQT
-        &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)  &kp RA(N4)  &kp RA(O)
-&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp C_NEXT  &kp BSLH   &trans
+        &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp UP_ARROW    &kp SQT          &kp DQT
+        &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RA(O)
+&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV      &kp C_NEXT       &kp BSLH   &trans
                                   &trans     &gif      &mo ADJ      &trans        &kp C_PP        &trans
             >;
         };
@@ -232,6 +232,15 @@
         &trans       &kp LS(LEFT)  &kp LC(F17)   &kp LS(RIGHT)  &kp RET        &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &trans  &kp J        &kp LS(C)     &kp LC(F16)   &kp LS(V)      &kp LC(F15)    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
                                    &trans        &kp LC(F12)    &kp LC(F11)    &trans  &trans  &trans
+            >;
+        };
+
+        Gaming {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &kp A   &kp S   &kp D   &kp F   &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp C   &kp V   &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
