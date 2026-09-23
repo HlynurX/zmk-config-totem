@@ -27,6 +27,7 @@
 //     10 11 12 13 14     15 16 17 18 19
 //  20 21 22 23 24 25     26 27 28 29 30 31
 //           32 33 34     35 36 37
+
 #define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25
 #define KEYS_R 5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31
 #define THUMBS 32 33 34 35 36 37
@@ -62,10 +63,12 @@
         // opposite hand (or a thumb) is pressed AND released while the mod is
         // held, or after the long tapping term. Typing fast right after
         // another key (require-prior-idle-ms) always gives the tap.
+
         hml: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
+
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
@@ -78,6 +81,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
+
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
@@ -119,10 +123,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp Q       &kp W       &kp E                    &kp R               &kp T        &kp Y        &kp U          &kp I        &AlphaHold MINUS O  &mt LEFT_BRACKET P
-                &hml LGUI A &hml LALT S &hml LCTRL D             &hml LSHFT F        &kp G        &kp H        &hmr RSHFT J   &hmr RCTRL K &hmr LALT L         &hmr LGUI SEMICOLON
-&kp LEFT_SHIFT  &kp Z       &kp X       &AlphaHold LC(C) C       &AlphaHold LC(V) V  &kp B        &kp N        &kp M          &kp COMMA    &kp DOT             &AlphaHold BACKSLASH SLASH  &kp SQT
-                                        &mt LEFT_CONTROL ESCAPE  &kp SPACE           &lt 1 TAB    &lt 2 ENTER  &kp BACKSPACE  &kp DELETE
+                &kp Q        &kp W        &kp E                    &kp R               &kp T        &kp Y        &kp U          &kp I         &AlphaHold MINUS O  &mt LEFT_BRACKET P
+                &hml LGUI A  &hml LALT S  &hml LCTRL D             &hml LSHFT F        &kp G        &kp H        &hmr RSHFT J   &hmr RCTRL K  &hmr LALT L         &hmr LGUI SEMICOLON
+&kp LEFT_SHIFT  &kp Z        &kp X        &AlphaHold LC(C) C       &AlphaHold LC(V) V  &kp B        &kp N        &kp M          &kp COMMA     &kp DOT             &AlphaHold BACKSLASH SLASH  &kp SQT
+                                          &mt LEFT_CONTROL ESCAPE  &kp SPACE           &lt 1 TAB    &lt 2 ENTER  &kp BACKSPACE  &kp DELETE
             >;
         };
 
@@ -145,10 +149,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESC    &bt BT_CLR  &kp UP    &kp EQUAL  &kp LBRC    &kp RBRC  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
-        &kp LSHFT  &kp LEFT    &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
-&trans  &kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &tog 5
-                               &trans    &trans     &trans      &mo 3     &kp KP_N0  &trans
+        &kp ESC    &trans     &kp UP    &kp EQUAL  &kp LBRC    &kp RBRC  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
+        &kp LSHFT  &kp LEFT   &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
+&trans  &kp DEL    &kp PG_UP  &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &kp KP_EQUAL
+                              &trans    &trans     &trans      &mo 3     &kp KP_N0  &trans
             >;
         };
 
@@ -173,7 +177,7 @@
             bindings = <
         &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp UP_ARROW    &kp SQT          &kp DQT
         &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp RA(O)
-&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV      &kp C_NEXT       &kp BSLH   &trans
+&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV      &kp C_NEXT       &kp BSLH   &tog 5
                                   &trans     &gif      &mo 3        &trans        &kp C_PP        &trans
             >;
         };
