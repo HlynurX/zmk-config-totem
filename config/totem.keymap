@@ -41,23 +41,6 @@
 / {
     combos { compatible = "zmk,combos"; };
 
-    macros {
-        gif: gif {
-            label = "giphy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp N2>,
-                <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp G &kp I &kp F>;
-        };
-    };
-
     behaviors {
         // Timeless home row mods: a hold only resolves when a key on the
         // opposite hand (or a thumb) is pressed AND released while the mod is
@@ -152,10 +135,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp Q        &kp W        &kp E                    &kp R               &kp T        &kp Y        &kp U          &kp I         &AlphaHold MINUS O  &mt LEFT_BRACKET P
+                &kp Q        &kp W        &kp E                    &kp R               &kp T        &kp Y        &kp U               &kp I         &AlphaHold MINUS O  &mt LEFT_BRACKET P
                 &hml LGUI A  &hml LALT S  &hml LCTRL D             &hml_shift LSHFT F  &kp G        &kp H        &hmr_shift RSHFT J  &hmr RCTRL K  &hmr LALT L         &hmr LGUI SEMICOLON
-&kp LEFT_SHIFT  &kp Z        &kp X        &AlphaHold LC(C) C       &AlphaHold LC(V) V  &kp B        &kp N        &kp M          &kp COMMA     &kp DOT             &AlphaHold BACKSLASH SLASH  &kp SQT
-                                          &mt LEFT_CONTROL ESCAPE  &kp SPACE           &lt 1 TAB    &lt 2 ENTER  &kp BACKSPACE  &kp DELETE
+&kp LEFT_SHIFT  &kp Z        &kp X        &AlphaHold LC(C) C       &AlphaHold LC(V) V  &kp B        &kp N        &kp M               &kp COMMA     &kp DOT             &AlphaHold BACKSLASH SLASH  &kp SQT
+                                          &mt LEFT_CONTROL ESCAPE  &kp SPACE           &lt 1 TAB    &lt 2 ENTER  &kp BACKSPACE       &kp DELETE
             >;
         };
 
